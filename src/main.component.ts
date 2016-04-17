@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
-import { TextComponent } from '../text/text.component';
-import { TextService } from '../services/text.service';
+import { TextComponent } from './text.component';
+import { TextService } from './text.service';
 
 @Component({
     selector: 'superhot',
