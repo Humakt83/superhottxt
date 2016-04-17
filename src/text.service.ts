@@ -14,7 +14,7 @@ export class TextService {
         let textToReturn = '';
         if (this._currentIndex === 0) {
             textToReturn = this._firstText;
-        } else if(this._currentIndex > HOTTXTS.length {
+        } else if (this._currentIndex > HOTTXTS.length) {
             textToReturn = this._endText;
         } else {
             textToReturn = this.randomText();
