@@ -7,7 +7,7 @@ import { TextService } from './text.service';
     template: `
         <div class="inputArea">
             <label><input #hotInput type="text" (keyup.enter)="addHotText(hotInput)" placeholder="Start typing">Press Enter To Submit</label>
-        </div>
+        </div><br>
 
         <supertxt *ngFor="#superHot of hotTexts" [superHotText]="superHot"></supertxt>
     `,

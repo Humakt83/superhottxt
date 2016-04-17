@@ -1,0 +1,22 @@
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+div {
+    border-radius: 15px;
+    border: 5px solid red;
+    padding: 5px;
+    display: inline-block;
+}
+
+.inputArea {
+    margin-bottom: 15px;
+}
+
+.superHotText {
+    background-color: red;
+    margin-bottom: 7px;
+}
