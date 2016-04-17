@@ -4,7 +4,13 @@ import { TextService } from '../services/text.service';
 
 @Component({
     selector: 'superhot',
-    templateUrl: 'src/main/main.html',
+    template: `
+        <div class="inputArea">
+            <label><input #hotInput type="text" (keyup.enter)="addHotText(hotInput)" placeholder="Start typing">Press Enter To Submit</label>
+        </div>
+
+        <supertxt *ngFor="#superHot of hotTexts" [superHotText]="superHot"></supertxt>
+    `,
     providers: [ TextService ],
     directives: [ TextComponent ]
 })
@@ -12,8 +18,10 @@ export class MainComponent {
     
     constructor(private _textService: TextService) {}
     
+    hotTexts: string[] = [];
+    
     addHotText(hotInput : HTMLInputElement) {
-        console.log(this._textService.getText());
+        this.hotTexts.push(this._textService.getText());
         hotInput.value = '';
     }
 }

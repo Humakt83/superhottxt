@@ -2,6 +2,8 @@ import { Component, Input } from 'angular2/core';
 
 @Component({
     selector: 'supertxt',
-    templateUrl: 'src/text/text.html'
+    template: '<div class="superhottext">{{superHotText}}</div>'
 })
-export class TextComponent {}
+export class TextComponent {
+    @Input() superHotText: string;
+}
