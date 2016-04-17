@@ -4,8 +4,9 @@
   "description": "When you type superhottxt types for you. Inspired by game Superhot.",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -w && lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "hot",
     "superhot"
   ],
-  "author": "",
+  "author": "Risto Salama",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/Humakt83/superhottxt/issues"
@@ -27,9 +28,12 @@
     "es6-shim": "^0.35.0",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.2",
+    "systemjs": "^0.19.26",
     "zone.js": "^0.6.11"
   },
   "devDependencies": {
-    "lite-server": "^2.2.0"
+    "concurrently": "^2.0.0",
+    "lite-server": "^2.2.0",
+    "typescript": "^1.8.10"
   }
 }
