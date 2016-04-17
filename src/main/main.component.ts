@@ -13,7 +13,7 @@ export class MainComponent {
     constructor(private _textService: TextService) {}
     
     addHotText(hotInput : HTMLInputElement) {
-        console.log('pressed');
+        console.log(this._textService.getText());
         hotInput.value = '';
     }
 }
