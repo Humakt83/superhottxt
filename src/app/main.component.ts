@@ -22,6 +22,9 @@ export class MainComponent {
     
     addHotText(hotInput : HTMLInputElement) {
         this.hotTexts.push(this._textService.getText());
+        if (this.hotTexts.length > 12) {
+            this.hotTexts.shift();
+        }
         hotInput.value = '';
     }
 }
